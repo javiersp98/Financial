@@ -1,9 +1,24 @@
+body {
+    /*Margen por arriba (para esquivar la barra superior)*/
+    margin-top: 120px;
+    /*Margen por la izq*/
+    margin-left: 70px;
+    /*Margen por la der*/
+    margin-right: 70px;
+    /*Ancho máximo*/
+    /*width: 85%;*/
+}
+
 .mostrar_cuentas {
-    width: 30%;
+    width: auto;
     border-style: solid;
+    margin-bottom: 20px;
+    float: left;
 }
 
 .mostrar_ingresos {
-    width: 30%;
+    width: auto;
     border-style: solid;
+    margin-bottom: 20px;
+    float: right;
 }
