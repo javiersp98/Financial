@@ -17,9 +17,10 @@ include "db/connect.php";
         <a class="navbar-brand" href="index.php">Organizador Financiero</a>
     </div>
     <ul class="nav navbar-nav navbar-middle" style="text-align: center;">
-        <li><a href="ver_patrimonio.php"><?php include "mostrar_patrimonio.php" ?></a></li>        
+        <li><a href="ver_patrimonio.php"><?php include "functions/mostrar_patrimonio.php" ?></a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">        
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="cuentas.php">Cuentas</a></li>
     </ul>
 </div>
 </nav>
