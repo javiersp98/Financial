@@ -24,8 +24,9 @@ CREATE TABLE ingresos (
     cuenta VARCHAR(50) -- lugar donde entra el dinero (EJ: efectivo, cuenta en Unicaja...)
 );
 INSERT INTO ingresos (id, importe, concepto, fecha, procedencia, cuenta)
-VALUES	(1, 100, "Ventas en ebay", '2018-12-25', "Ebay", "Unicaja"),
-		(2, 200, "Venta de acciones", '2018-12-28', "Acciones", "Santander");
+VALUES	(1, 100, "Ventas en Ebay", '2018-12-25', "Ebay", "Unicaja"),
+		(2, 200, "Venta de acciones", '2018-12-28', "Acciones", "Santander"),
+        (3, 250, "Ventas en Amazon", '2018-12-31', "Amazon", "Unicaja");
 
 DROP TABLE IF EXISTS gastos;
 CREATE TABLE gastos (
@@ -48,7 +49,7 @@ CREATE TABLE pagar (
     cobrador VARCHAR(50)
 );
 INSERT INTO pagar (id, concepto, importe, fecha_creacion, fecha_tope, cobrador)
-VALUES	(1, "Cerveza", 2, '2018-12-10', NULL, "Pablete");
+VALUES	(1, "Cerveza", 1, '2018-12-10', NULL, "Pablete");
 
 DROP TABLE IF EXISTS cobrar;
 CREATE TABLE cobrar (
