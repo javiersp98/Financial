@@ -4,7 +4,7 @@
     <tr>
         <th>Nombre</th>
         <th>Saldo</th>
-        <th>Descripcion</th>        
+        <th>Descripcion</th>
     </tr>
     </thead>
 
@@ -18,6 +18,19 @@ while($row = mysql_fetch_array( $res )) {?>
         <td><?php echo $row['nombre'];?></td>
         <td><?php echo $row['saldo'];?></td>
         <td><?php echo $row['descripcion'];?></td>
+
+        <!--EDITAR-->
+        <?php 
+        //Permite o no editar los datos
+        //Esta variable es enviada desde el solicitante
+        //$editar=0;
+            if ($editar == 1) {
+                require "mostrar_cuentas_edit.php";
+            }
+            if ($editar == 0) {
+
+            }
+            ?>
     </tr>
 
 <?php } ?>

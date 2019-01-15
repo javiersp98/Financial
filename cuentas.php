@@ -7,5 +7,5 @@ include "db/connect.php";
 <?php include "modals/crear_cuenta.php"; ?>
 
 <div class="mostrar_cuentas"><p>
-  <?php include "functions/mostrar_cuentas.php"; ?>
+  <?php $editar=1; include "functions/mostrar_cuentas.php"; ?>
 </p></div>

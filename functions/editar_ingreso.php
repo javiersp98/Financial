@@ -10,7 +10,6 @@ $fecha = $_POST['input-fecha'];
 $procedencia = $_POST['input-procedencia'];
 $cuenta = $_POST['input-cuenta'];
 
-
 // Borramos el registro anterior
 $sql = "DELETE FROM ingresos WHERE id=$id";
 $result = mysql_query($sql) or die(mysql_error());

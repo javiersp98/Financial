@@ -9,16 +9,29 @@ body {
     /*width: 85%;*/
 }
 
+
+
+/* Cuentas */
 .mostrar_cuentas {
     width: auto;
     border-style: solid;
     margin-bottom: 20px;
     float: left;
 }
+.mostrar_cuentas_texto {
+    margin: auto;
+    width: 50%;    
+}
 
+
+/* Ingresos */
 .mostrar_ingresos {
     width: auto;
     border-style: solid;
     margin-bottom: 20px;
     float: right;
+}
+.mostrar_ingresos_texto {
+    margin: auto;
+    width: 50%;    
 }
