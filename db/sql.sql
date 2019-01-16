@@ -38,6 +38,9 @@ CREATE TABLE gastos (
     categoria VARCHAR(50), -- tipo de gasto (EJ: comida, facturas  del agua, gasolina...)
     cuenta VARCHAR(50) -- lugar de donde sale el dinero
 );
+INSERT INTO gastos (id, importe, concepto, fecha, receptor, categoria, cuenta)
+VALUES	(1, 50, "Gasolina", '2019-01-15', "Hidrocarburos Alhaurín", "Transporte/Combustible", "Efectivo"),
+		(2, 5, "Hamburguesa" '2018-01-09', "Burguer Star", "Diversion/Comida", "Efectivo");
 
 DROP TABLE IF EXISTS pagar;
 CREATE TABLE pagar (
@@ -60,4 +63,3 @@ CREATE TABLE cobrar (
     fecha_tope DATE,
     pagador VARCHAR(50)
 );
-

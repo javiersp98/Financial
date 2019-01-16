@@ -18,7 +18,7 @@ while($row = mysql_fetch_array( $res )) {?>
 
     <tr>
         <td><?php echo $row['concepto'];?></td>
-        <td><?php echo $row['importe'];?></td>
+        <td style="text-align:right;"><?php echo $row['importe'];?></td>
         <td><?php echo $row['fecha'];?></td>
         <td><?php echo $row['procedencia'];?></td>
         <td><?php echo $row['cuenta'];?></td>

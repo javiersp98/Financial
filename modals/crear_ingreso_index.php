@@ -1,10 +1,10 @@
 <!--AÑADIR-->
 <!-- Lanzar el modal de añadir -->
-<button type="button" class="btn btn-primary separar" data-toggle="modal" data-target="#modal_anadir">
+<button type="button" class="btn btn-primary separar" data-toggle="modal" data-target="#modal_anadir_ingreso">
   Crear nuevo Ingreso
 </button>
 <!-- Modal de crear -->
-<div class="modal fade" id="modal_anadir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_anadir_ingreso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -15,7 +15,7 @@
       </div>
       <div class="modal-body">
         <!-- Formulario de introducción de datos -->
-        <form action="functions/crear_ingreso.php" method="POST">
+        <form action="functions/crear_ingreso_index.php" method="POST">
           Importe<br>
           <input type="text" class="form-control form-space" name="input-importe" value="" />
           Concepto<br>

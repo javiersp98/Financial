@@ -1,7 +1,7 @@
 <!--AÑADIR-->
 <!-- Lanzar el modal de añadir -->
 <button type="button" class="btn btn-primary separar" data-toggle="modal" data-target="#modal_anadir">
-  Crear Nueva
+  Crear nueva Cuenta
 </button>
 <!-- Modal de crear -->
 <div class="modal fade" id="modal_anadir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

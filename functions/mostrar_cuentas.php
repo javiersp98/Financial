@@ -16,7 +16,7 @@ while($row = mysql_fetch_array( $res )) {?>
 
     <tr>
         <td><?php echo $row['nombre'];?></td>
-        <td><?php echo $row['saldo'];?></td>
+        <td style="text-align:right;"><?php echo $row['saldo'];?></td>
         <td><?php echo $row['descripcion'];?></td>
 
         <!--EDITAR-->
