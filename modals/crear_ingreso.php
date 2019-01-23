@@ -15,7 +15,7 @@
       </div>
       <div class="modal-body">
         <!-- Formulario de introducción de datos -->
-        <form action="functions/crear_ingreso.php" method="POST">
+        <form action="functions/ingresos/crear_ingreso.php" method="POST">
           Importe<br>
           <input type="text" class="form-control form-space" name="input-importe" value="" />
           Concepto<br>
@@ -25,7 +25,18 @@
           Procedencia<br>
           <input type="text" class="form-control form-space" name="input-procedencia" value="" />
           Cuenta<br>
-          <input type="text" class="form-control form-space" name="input-cuenta" value="" />
+          <select name="input-cuenta" class="form-control form-space">
+            <?php
+              include('../db/connect.php');              
+              $res = mysql_query("SELECT nombre FROM cuentas")
+              or die(mysql_error());
+              while($row = mysql_fetch_array( $res )) {                
+                ?>
+                  <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
+                <?php
+              }
+            ?>
+          </select>
           <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
               <button type="reset"  class="btn btn-danger">Limpiar</button>

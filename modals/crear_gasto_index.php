@@ -15,7 +15,7 @@
       </div>
       <div class="modal-body">
         <!-- Formulario de introducción de datos -->
-        <form action="functions/crear_gasto_index.php" method="POST">
+        <form action="functions/gastos/crear_gasto_index.php" method="POST">
           Importe<br>
           <input type="text" class="form-control form-space" name="input-importe" value="" />
           Concepto<br>
@@ -27,11 +27,23 @@
           Categoria<br>
           <input type="text" class="form-control form-space" name="input-categoria" value="" />
           Cuenta<br>
-          <input type="text" class="form-control form-space" name="input-cuenta" value="" />
+          <select name="input-cuenta" class="form-control form-space">
+            <?php
+              include('../db/connect.php');              
+              $res = mysql_query("SELECT nombre FROM cuentas")
+              or die(mysql_error());
+              while($row = mysql_fetch_array( $res )) {                
+                ?>
+                  <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
+                <?php
+              }
+            ?>
+          </select>
+
           <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="reset"  class="btn btn-danger">Limpiar</button>
-              <button type="submit" class="btn btn-success">Crear</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="reset"  class="btn btn-danger">Limpiar</button>
+            <button type="submit" class="btn btn-success">Crear</button>
           </div>
         </form>
       </div>

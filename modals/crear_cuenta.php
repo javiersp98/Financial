@@ -15,7 +15,7 @@
       </div>
       <div class="modal-body">
         <!-- Formulario de introducción de datos -->
-        <form action="functions/crear_cuenta.php" method="POST">                    
+        <form action="functions/cuentas/crear_cuenta.php" method="POST">                    
             Nombre<br>
             <input type="text" class="form-control form-space" name="input-nombre" value="" />
             Saldo inicial<br>

@@ -2,18 +2,7 @@ body {
     /*Margen por arriba (para esquivar la barra superior)*/
     margin-top: 100px;
     /*Margen por la izq*/
-    margin-left: 70px;
+    margin-left: 25%;
     /*Margen por la der*/
-    margin-right: 70px;
-    /*Ancho máximo*/
-    /*width: 85%;*/
-}
-
-.mostrar_cuentas {
-    /*
-    width: auto;
-    border-style: solid;
-    margin-bottom: 20px;
-    float: left;
-    */
+    margin-right: 25%;
 }

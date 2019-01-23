@@ -17,11 +17,12 @@ include "db/connect.php";
         <a class="navbar-brand" href="index.php">Organizador Financiero</a>
     </div>
     <ul class="nav navbar-nav navbar-middle" style="text-align: center;">
-        <li><a href="patrimonio.php"><?php include "functions/mostrar_patrimonio.php" ?></a></li>
+        <li><a href="patrimonio.php"><?php include "functions/patrimonio/mostrar_patrimonio.php" ?></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li><a href="cuentas.php">Cuentas</a></li>
         <li><a href="ingresos.php">Ingresos</a></li>
+        <li><a href="gastos.php">Gastos</a></li>
     </ul>
 </div>
 </nav>
@@ -29,12 +30,12 @@ include "db/connect.php";
 <!--BARRA INFERIOR-->
 <!-- 
 <nav class="navbar navbar-fixed-bottom navbar-inverse">
-<div class="container-fluid">        
+<div class="container-fluid">
     <ul class="nav navbar-nav navbar-left">
         <li><a href="#">Opciones</a></li>
-        <li><a href="#">Ayuda</a></li>                
+        <li><a href="#">Ayuda</a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">              
+    <ul class="nav navbar-nav navbar-right">
     </ul>
 </div>
 </nav>

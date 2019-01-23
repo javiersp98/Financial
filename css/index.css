@@ -32,7 +32,7 @@ body {
 }
 .mostrar_cuentas_texto {
     margin: auto;
-    width: 50%;    
+    width: 50%;
 }
 
 
@@ -46,7 +46,7 @@ body {
 }
 .mostrar_ingresos_texto {
     margin: auto;
-    width: 50%;    
+    width: 50%;
 }
 .boton_crear_ingreso {
     float: right;
@@ -65,7 +65,7 @@ body {
 }
 .mostrar_gastos_texto {
     margin: auto;
-    width: 50%;    
+    width: 50%;
 }
 .boton_crear_gasto {
     float: right;

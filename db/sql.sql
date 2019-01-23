@@ -10,7 +10,7 @@ CREATE TABLE cuentas (
     descripcion VARCHAR(50)
 );
 INSERT INTO cuentas (id, nombre, saldo, descripcion)
-VALUES 	(1, "Efectivo", 20, "Dinero en mano"),
+VALUES 	(1, "Efectivo", 50, "Dinero en mano"),
 		(2, "Unicaja", 100, "Cuenta habitual"),
 		(3, "Santander", 300,"Cuenta de ahorro");
 
@@ -39,8 +39,8 @@ CREATE TABLE gastos (
     cuenta VARCHAR(50) -- lugar de donde sale el dinero
 );
 INSERT INTO gastos (id, importe, concepto, fecha, receptor, categoria, cuenta)
-VALUES	(1, 50, "Gasolina", '2019-01-15', "Hidrocarburos Alhaurín", "Transporte/Combustible", "Efectivo"),
-		(2, 5, "Hamburguesa" '2018-01-09', "Burguer Star", "Diversion/Comida", "Efectivo");
+VALUES	(1, 50, "Gasolina", '2019-01-15', "Hidrocarburos Alhaurin", "Transporte/Combustible", "Efectivo"),
+		(2, 20, "Regalo", '2019-01-25', "Tienda de regalos", "Regalos", "Efectivo");
 
 DROP TABLE IF EXISTS pagar;
 CREATE TABLE pagar (
