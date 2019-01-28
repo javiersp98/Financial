@@ -14,7 +14,7 @@ include "db/connect.php";
 <nav class="navbar navbar-fixed-top navbar-inverse">
 <div class="container-fluid">
     <div class="navbar-header">
-        <a class="navbar-brand" href="index.php">Organizador Financiero</a>
+        <a class="navbar-brand" href="index.php">Financial Networth Tracker</a>
     </div>
     <ul class="nav navbar-nav navbar-middle" style="text-align: center;">
         <li><a href="patrimonio.php"><?php include "functions/patrimonio/mostrar_patrimonio.php" ?></a></li>
@@ -23,6 +23,8 @@ include "db/connect.php";
         <li><a href="cuentas.php">Cuentas</a></li>
         <li><a href="ingresos.php">Ingresos</a></li>
         <li><a href="gastos.php">Gastos</a></li>
+        <li><a href="inversiones.php">Inversiones</a></li>
+        <li><a href="activos.php">Activos</a></li>
     </ul>
 </div>
 </nav>

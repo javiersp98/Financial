@@ -2,7 +2,7 @@
 
 $dataPoints = array();
 
-include "../db/connect.php";
+//include "../db/connect.php";
 $sql = mysql_query("SELECT nombre, saldo FROM cuentas")
 or die(mysql_error());
 while($row = mysql_fetch_array( $sql )) {
@@ -17,28 +17,28 @@ while($row = mysql_fetch_array( $sql )) {
 <head>
 <script>
 window.onload = function () {
- 
-var chart = new CanvasJS.Chart("chartContainer", {
-    animationEnabled: true,
-    exportEnabled: true,
-    title:{
-        text: "Cuentas bancarias"
-    },
-    subtitles: [{
-        text: ""
-    }],
-    data: [{
-        type: "pie",
-        showInLegend: "true",
-        legendText: "{label}",
-        indexLabelFontSize: 16,
-        indexLabel: "{label} - #percent%",
-        yValueFormatString: "€#,##0",
-        dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-    }]
-});
-chart.render();
- 
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        exportEnabled: true,
+        title:{
+            text: "Cuentas bancarias"
+        },
+        subtitles: [{
+            text: ""
+        }],
+        data: [{
+            type: "pie",
+            showInLegend: "true",
+            legendText: "{label}",
+            indexLabelFontSize: 16,
+            indexLabel: "{label} - #percent%",
+            yValueFormatString: "€#,##0",
+            dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+        }]
+    });
+    chart.render();
+
 }
 </script>
 </head>

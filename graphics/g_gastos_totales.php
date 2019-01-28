@@ -2,7 +2,7 @@
 
 $dataPoints = array();
 
-include "../db/connect.php";
+//include "../db/connect.php";
 $sql = mysql_query("SELECT importe, receptor FROM gastos")
 or die(mysql_error());
 while($row = mysql_fetch_array( $sql )) {

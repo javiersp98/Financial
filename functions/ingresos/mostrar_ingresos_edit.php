@@ -66,6 +66,6 @@
 </td>
 
 <!--BORRAR SIN CONFIRMACIÓN-->
-<td>
+<!--<td>-->
     <?php // echo '<td><a href="functions/ingresos/borrar_ingreso.php?id=' . $row['id'] . '" class="btn btn-danger">Borrar</a></td>'; ?>
-</td>
+<!--</td>-->
