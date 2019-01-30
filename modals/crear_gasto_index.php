@@ -24,8 +24,19 @@
           <input type="date" class="form-control form-space" name="input-fecha" value="<?php echo date("Y-m-d");?>" />
           Receptor<br>
           <input type="text" class="form-control form-space" name="input-receptor" value="" />
-          Categoria<br>
-          <input type="text" class="form-control form-space" name="input-categoria" value="" />
+          Categoria<br>          
+          <select name="input-categoria" class="form-control form-space">
+            <?php
+              include('../db/connect.php');              
+              $res = mysql_query("SELECT nombre FROM gastos_categorias")
+              or die(mysql_error());
+              while($row = mysql_fetch_array( $res )) {                
+                ?>
+                  <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
+                <?php
+              }
+            ?>
+          </select>
           Cuenta<br>
           <select name="input-cuenta" class="form-control form-space">
             <?php

@@ -1,45 +1,27 @@
 <!--AÑADIR-->
 <!-- Lanzar el modal de añadir -->
-<button type="button" class="btn btn-primary separar" data-toggle="modal" data-target="#modal_anadir">
-  Crear nuevo Gasto
+<button type="button" class="btn btn-primary separar" data-toggle="modal" data-target="#modal_anadir_inversion">
+  Crear nueva Inversión
 </button>
 <!-- Modal de crear -->
-<div class="modal fade" id="modal_anadir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_anadir_inversion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crear un nuevo Ingreso</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Crear una nueva Inversión</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <!-- Formulario de introducción de datos -->
-        <form action="functions/gastos/crear_gasto.php" method="POST">
-          Importe<br>
-          <input type="text" class="form-control form-space" name="input-importe" value="" />
-          Concepto<br>
-          <input type="text" class="form-control form-space" name="input-concepto" value="" />
+        <form action="functions/inversiones/crear_inversion.php" method="POST">
+          Nombre<br>
+          <input type="text" class="form-control form-space" name="input-nombre" value="" />
+          Valor inicial (Cuánto se ha invertido inicialmente)<br>
+          <input type="text" class="form-control form-space" name="input-valor_inicial" value="" />
           Fecha<br>
           <input type="date" class="form-control form-space" name="input-fecha" value="<?php echo date("Y-m-d");?>" />
-          Receptor<br>
-          <input type="text" class="form-control form-space" name="input-receptor" value="" />
-          Categoria<br> 
-          <div style="display: flex;">                     
-            <select name="input-categoria" class="form-control form-space">
-              <?php
-                include('../db/connect.php');              
-                $res = mysql_query("SELECT nombre FROM gastos_categorias")
-                or die(mysql_error());
-                while($row = mysql_fetch_array( $res )) {                
-                  ?>
-                    <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
-                  <?php
-                }
-                //include "crear_categoriagasto.php";
-              ?>
-            </select>            
-          </div>  
           Cuenta<br>
           <select name="input-cuenta" class="form-control form-space">
             <?php
@@ -52,6 +34,7 @@
                 <?php
               }
             ?>
+          </select>
           </select>
           <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

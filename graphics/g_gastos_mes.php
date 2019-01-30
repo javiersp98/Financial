@@ -2,11 +2,21 @@
 
 $dataPoints = array();
 
-//include "../db/connect.php";
-$sql = mysql_query("SELECT SUM(importe) AS importe, categoria FROM gastos GROUP BY categoria")
+include "../db/connect.php";
+
+$ano_actual = date(Y);
+$mes_actual = date(m);
+
+$sql = mysql_query("SELECT importe, concepto FROM gastos WHERE fecha LIKE '$ano_actual%$mes_actual%' ")
 or die(mysql_error());
+
+ob_start();
+print_r($sql);
+$nombre = ob_get_clean();
+file_put_contents("C:\pruebas\ARCHIVO.txt",$nombre);
+
 while($row = mysql_fetch_array( $sql )) {
-    $data['label'] = $row['categoria'];
+    $data['label'] = $row['concepto'];
     $data['y'] = $row['importe'];
     array_push($dataPoints, $data);
 }
@@ -22,7 +32,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     exportEnabled: true,
     title:{
-        text: "Gastos por Categoría"
+        text: "Gastos de este mes"
     },
     subtitles: [{
         text: ""

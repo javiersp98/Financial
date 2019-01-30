@@ -28,11 +28,11 @@
           <select name="input-cuenta" class="form-control form-space">
             <?php
               include('../db/connect.php');              
-              $res = mysql_query("SELECT nombre FROM cuentas")
+              $res = mysql_query("SELECT nombre, saldo FROM cuentas")
               or die(mysql_error());
               while($row = mysql_fetch_array( $res )) {                
                 ?>
-                  <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
+                  <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?> (<?php echo $row['saldo']?>€)</option>
                 <?php
               }
             ?>
