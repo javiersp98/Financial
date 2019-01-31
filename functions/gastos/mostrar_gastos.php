@@ -13,7 +13,7 @@
 
 <?php
 // Consulta a la BD
-$res = mysql_query("SELECT * FROM gastos")
+$res = mysql_query("SELECT * FROM gastos ORDER BY fecha DESC")
 or die(mysql_error());
 while($row = mysql_fetch_array( $res )) {?>
 

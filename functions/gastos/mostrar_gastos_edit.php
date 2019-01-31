@@ -25,8 +25,20 @@
                     <input type="text" class="form-control form-space" name="input-fecha" value="<?php echo $row['fecha']?>" />
                     Receptor del dinero<br>
                     <input type="text" class="form-control form-space" name="input-receptor" value="<?php echo $row['receptor']?>" />
-                    Categoría del gasto<br>
-                    <input type="text" class="form-control form-space" name="input-categoria" value="<?php echo $row['categoria']?>" />
+                    Categoria<br>
+                    <select name="input-categoria" class="form-control form-space">
+                    <option value="<?php echo $row['categoria']?>"><?php echo $row['categoria']?></option>
+                      <?php
+                        /*include('../../db/connect.php');*/
+                        $res_gastos_categorias = mysql_query("SELECT id, nombre FROM gastos_categorias ORDER BY nombre ASC;")
+                        or die(mysql_error());
+                        while($row = mysql_fetch_array( $res_gastos_categorias )) {        
+                          ?>
+                            <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
+                          <?php
+                        }
+                      ?>
+                    </select>
                     Cuenta de la que ha salido el gasto<br>
                     <input type="text" class="form-control form-space" name="input-cuenta" value="<?php echo $row['cuenta']?>" />
                     <div class="modal-footer">

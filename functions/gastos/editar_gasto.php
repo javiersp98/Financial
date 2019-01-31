@@ -1,6 +1,6 @@
 <?php
 
-include('../db/connect.php');
+include('../../db/connect.php');
 
 // Convierte los datos del formulario en variables PHP
 $id = $_POST['input-id'];
@@ -21,4 +21,4 @@ cuenta='$cuenta'
 WHERE id=$id";
 $result = mysql_query($sql) or die(mysql_error());
 
-header("Location: ../gastos.php");
+header("Location: ../../gastos.php");

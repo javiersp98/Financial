@@ -1,0 +1,9 @@
+Inversiones. Elementos necesarios
+
+Gráfico que muestre el valor de todas las inversiones por separado a lo largo del tiempo
+Gráfico que muestre el valor de todas las inversiones de forma conjunta lo largo del tiempo
+*Modal que permita crear una nueva inversion
+Modal que permita actualizar el valor de una inversion
+Modal que permita vender una inversion e ingresar su valor en una de nuestras cuentas
+*Tabla para almacenar "inversion" -> id, nombre, valor_inicial, valor_actual, valor_venta, vendida
+Tabla para almacenar "inversion_valor" -> id_inversion, nombre_inversion, fecha, valor

@@ -18,9 +18,9 @@
         <form action="functions/inversiones/crear_inversion.php" method="POST">
           Nombre<br>
           <input type="text" class="form-control form-space" name="input-nombre" value="" />
-          Valor inicial (Cuánto se ha invertido inicialmente)<br>
+          Inversión Inicial<br>
           <input type="text" class="form-control form-space" name="input-valor_inicial" value="" />
-          Fecha<br>
+          Fecha de adquisición<br>
           <input type="date" class="form-control form-space" name="input-fecha" value="<?php echo date("Y-m-d");?>" />
           Cuenta<br>
           <select name="input-cuenta" class="form-control form-space">

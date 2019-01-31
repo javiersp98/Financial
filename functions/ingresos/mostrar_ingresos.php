@@ -12,7 +12,7 @@
 
 <?php
 // Consulta a la BD
-$res = mysql_query("SELECT * FROM ingresos")
+$res = mysql_query("SELECT * FROM ingresos ORDER BY fecha DESC")
 or die(mysql_error());
 while($row = mysql_fetch_array( $res )) {?>
 
