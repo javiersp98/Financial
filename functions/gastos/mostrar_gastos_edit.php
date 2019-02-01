@@ -30,11 +30,11 @@
                     <option value="<?php echo $row['categoria']?>"><?php echo $row['categoria']?></option>
                       <?php
                         /*include('../../db/connect.php');*/
-                        $res_gastos_categorias = mysql_query("SELECT id, nombre FROM gastos_categorias ORDER BY nombre ASC;")
+                        $res_gastos_categorias = mysql_query("SELECT nombre FROM gastos_categorias ORDER BY nombre ASC;")
                         or die(mysql_error());
-                        while($row = mysql_fetch_array( $res_gastos_categorias )) {        
+                        while($row2 = mysql_fetch_array( $res_gastos_categorias )) {        
                           ?>
-                            <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
+                            <option value="<?php echo $row2['nombre']?>"><?php echo $row2['nombre']?></option>
                           <?php
                         }
                       ?>

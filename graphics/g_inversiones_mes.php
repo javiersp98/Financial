@@ -7,7 +7,7 @@ include "../db/connect.php";
 $ano_actual = date(Y);
 $mes_actual = date(m);
 
-$sql = mysql_query("SELECT SUM(valor_actual), fecha FROM inversiones ")
+$sql = mysql_query("SELECT fecha_compra, valor_actual , valor_inicial FROM inversiones ")
 or die(mysql_error());
 
 ob_start();
@@ -16,8 +16,8 @@ $nombre = ob_get_clean();
 file_put_contents("C:\pruebas\ARCHIVO.txt",$nombre);
 
 while($row = mysql_fetch_array( $sql )) {
-    $data['label'] = $row['nombre_inversion'];
-    $data['y'] = $row['valor'];
+    $data['x'] = $row['fecha_compra'];
+    $data['y'] = $row['valor_inicial'];
     array_push($dataPoints, $data);
 }
 
@@ -25,28 +25,29 @@ while($row = mysql_fetch_array( $sql )) {
 
 <!DOCTYPE HTML>
 <html>
-<head>  
+<head>
 <script>
-window.onload = function () {
+window.onload = function() {
  
 var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	theme: "light2",
 	title: {
-		text: "CMS Market Share - 2017"
+		text: "Ericsson Stock Price - December 2017"
+	},
+	subtitles: [{
+		text: "Currency in Swedish Krona"
+	}],
+	axisX: {
+		valueFormatString: "DD MMM"
 	},
 	axisY: {
-		suffix: "%",/*
-		scaleBreaks: {
-			autoCalculate: true
-		}*/
+		includeZero: false,
+		suffix: " kr"
 	},
 	data: [{
-		type: "column",
-		yValueFormatString: "#,##0\"%\"",
-		indexLabel: "{y}",
-		indexLabelPlacement: "inside",
-		indexLabelFontColor: "white",
+		type: "candlestick",
+		xValueType: "date",
+		yValueFormatString: "#,##0.0 kr",
+		xValueFormatString: "DD MMM",
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
 });
@@ -59,4 +60,4 @@ chart.render();
 <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
-</html>                              
+</html>

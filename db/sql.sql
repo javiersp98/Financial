@@ -10,9 +10,10 @@ CREATE TABLE cuentas (
     descripcion VARCHAR(50)
 );
 INSERT INTO cuentas (id, nombre, saldo, descripcion)
-VALUES 	(1, "Efectivo", 100, "Dinero en mano"),
-		(2, "Unicaja", 1000, "Cuenta habitual"),
-		(3, "Santander", 3000,"Cuenta de ahorro");
+VALUES 	(1, "Efectivo", 50, "Dinero en mano"),
+		(2, "Caché", 350, "Dinero almacenado"),
+		(3, "Unicaja", 2950, "Cuenta habitual"),
+		(4, "OpenBank", 0, "Cuenta de inversión");
 
 DROP TABLE IF EXISTS ingresos;
 CREATE TABLE ingresos (
@@ -24,9 +25,9 @@ CREATE TABLE ingresos (
     cuenta VARCHAR(50) -- lugar donde entra el dinero (EJ: efectivo, cuenta en Unicaja...)
 );
 INSERT INTO ingresos (id, importe, concepto, fecha, procedencia, cuenta)
-VALUES	(1, 100, "Ventas en Ebay", '2018-12-25', "Ebay", "Unicaja"),
-		(2, 200, "Venta de acciones", '2018-12-28', "Acciones", "Santander"),
-        (3, 250, "Ventas en Amazon", '2018-12-31', "Amazon", "Unicaja");
+VALUES	(1, 200, "Paga Diciembre", '2018-12-20', "Salutic", "Unicaja"),
+		(2, 200, "Regalos", '2018-12-31', "Familiares", "Efectivo"),
+		(3, 100, "Paga Enero", '2019-01-30', "Salutic", "Unicaja");        
 
 DROP TABLE IF EXISTS gastos;
 CREATE TABLE gastos (
@@ -94,6 +95,7 @@ CREATE TABLE inversiones (
     valor_actual DECIMAL(8,2),
     valor_venta DECIMAL(8,2),
     fecha_compra DATE,
+    fecha_valor_actual DATE,
     fecha_venta DATE,
     vendida BOOLEAN
 );
