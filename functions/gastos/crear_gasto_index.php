@@ -11,11 +11,12 @@ $receptor = $_POST['input-receptor'];
 $categoria = $_POST['input-categoria'];
 $cuenta = $_POST['input-cuenta'];
 
-// Convertimos la consulta SQL en una única variable
+// Ejecutamos la consulta para crear un nuevo gasto
 $sql = "INSERT INTO gastos (importe, concepto, fecha, receptor, categoria, cuenta)
 VALUES ('$importe', '$concepto', '$fecha', '$receptor', '$categoria', '$cuenta')";
 $result = mysql_query($sql) or die(mysql_error());
 
+// Ejecutamos la consulta para descontar el gasto de una cuenta bancaria
 $sql2 = "UPDATE cuentas SET saldo = saldo - '$importe' WHERE nombre LIKE '$cuenta'";
 
 if (mysql_query($sql2) === TRUE) {

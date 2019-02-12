@@ -10,6 +10,7 @@ $fecha = $_POST['input-fecha'];
 $procedencia = $_POST['input-procedencia'];
 $cuenta = $_POST['input-cuenta'];
 
+// Editamos el ingreso
 $sql = "UPDATE ingresos SET 
 importe='$importe',
 concepto='$concepto',
@@ -19,4 +20,5 @@ cuenta='$cuenta'
 WHERE id=$id";
 $result = mysql_query($sql) or die(mysql_error());
 
+// Volvemos al origen
 header("Location: ../../ingresos.php");

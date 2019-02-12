@@ -12,6 +12,7 @@ $descripcion = $_POST['input-descripcion'];
 $sql = "INSERT INTO cuentas (nombre, saldo, descripcion)
 VALUES ('$nombre', '$saldo', '$descripcion')";
 
+// Ejecutamos la consulta SQL
 if (mysql_query($sql) === TRUE) {
     // Si todo sale bien volvemos a Cuentas
     header("Location: ../../cuentas.php");

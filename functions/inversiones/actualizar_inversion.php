@@ -9,9 +9,13 @@ $valor_actual = $_POST['input-valor_actual'];
 $fecha = $_POST['input-fecha'];
 
 // Cambio del valor actual
-$sql = "UPDATE inversiones SET valor_actual = '$valor_actual', fecha_valor_actual = '$fecha'";
+$sql = "UPDATE inversiones SET 
+valor_actual = '$valor_actual', 
+fecha_valor_actual = '$fecha'
+WHERE nombre = '$nombre' ";
 $result = mysql_query($sql) or die(mysql_error());
 
+// Obtenemos el Id de la inversion
 $id_inversion = "SELECT id FROM inversiones WHERE nombre='$nombre'";
 
 // Insertamos un nuevo valor de la inversión asociado con la fecha, usado para estadísticas

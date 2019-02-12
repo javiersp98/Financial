@@ -6,7 +6,7 @@ include('../../db/connect.php');
 // Obtenemos el ID del registro a borrar
 $id = $_GET['id'];
 
-// Borramos el registro
+// Borramos el registro de la base de datos
 $result = mysql_query("DELETE FROM cuentas WHERE id=$id")
 or die(mysql_error());
 

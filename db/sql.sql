@@ -11,9 +11,9 @@ CREATE TABLE cuentas (
 );
 INSERT INTO cuentas (id, nombre, saldo, descripcion)
 VALUES 	(1, "Efectivo", 50, "Dinero en mano"),
-		(2, "Caché", 350, "Dinero almacenado"),
-		(3, "Unicaja", 2950, "Cuenta habitual"),
-		(4, "OpenBank", 0, "Cuenta de inversión");
+		(2, "Caja", 350, "Dinero almacenado"),
+		(3, "Unicaja", 2965.98, "Cuenta habitual"),
+		(4, "OpenBank", 0, "Cuenta de inversion");
 
 DROP TABLE IF EXISTS ingresos;
 CREATE TABLE ingresos (
@@ -101,7 +101,7 @@ CREATE TABLE inversiones (
 );
 INSERT INTO inversiones (id, nombre, valor_inicial, valor_actual, valor_venta, fecha_compra, fecha_venta, vendida)
 VALUES	(1, 'Finca', 30000, 35000, NULL, '2017-08-15', NULL, 0),
-		(2, 'Piso', 40000, NULL, NULL, '2018-09-07', NULL, 0),
+		(2, 'Piso', 40000, 42000, NULL, '2018-09-07', NULL, 0),
         (3, 'Local Restaurado', 25000, 35000, 35000, '2018-02-01', '2018-04-01', 1);
 
 DROP TABLE IF EXISTS inversion_valor;
@@ -121,4 +121,4 @@ VALUES	(1, 1, 'Finca', '2017-08-15', 30000),
         (6, 3, 'Local Restaurado', '2018-04-01', 35000);
         
         
-SELECT SUM(valor), fecha FROM inversion_valor GROUP BY fecha;
+-- SELECT SUM(valor), fecha FROM inversion_valor GROUP BY fecha;

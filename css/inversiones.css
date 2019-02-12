@@ -14,15 +14,26 @@ body {
 .column {
   float: left;
 }
-.middle, .right {
-  width: 40%;
-}.left {
+.left {
+  width: 50%;
+}
+.middle {
   width: 20%;
 }
+.right {
+  width: 30%
+}
 
-/* Cuentas */
+/* Inversiones */
 .mostrar_inversiones {
     max-width: 100%;
+    /*border-style: solid;*/
+    margin-bottom: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.historico_inversiones {
+  max-width: 100%;
     /*border-style: solid;*/
     margin-bottom: 40px;
     margin-right: 5px;

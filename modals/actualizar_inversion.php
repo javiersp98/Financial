@@ -16,7 +16,7 @@
       <div class="modal-body">
         <!-- Formulario de introducción de datos -->
         <form action="functions/inversiones/actualizar_inversion.php" method="POST">
-          Nombre<br>
+          Nombre (Valor de compra - Valor más reciente)<br>
           <select name="input-nombre" class="form-control form-space">
             <?php
               include('../db/connect.php');              

@@ -10,11 +10,12 @@ $fecha = $_POST['input-fecha'];
 $procedencia = $_POST['input-procedencia'];
 $cuenta = $_POST['input-cuenta'];
 
-// Convertimos la consulta SQL en una única variable
+// Ejecutamos la consulta para crear un nuevo ingreso
 $sql = "INSERT INTO ingresos (importe, concepto, fecha, procedencia, cuenta)
 VALUES ('$importe', '$concepto', '$fecha', '$procedencia', '$cuenta')";
 $result = mysql_query($sql) or die(mysql_error());
 
+// Ejecutamos la consulta para actualizar el saldo de la cuenta seleccionada
 $sql2 = "UPDATE cuentas SET saldo = saldo + '$importe' WHERE nombre LIKE '$cuenta'";
 
 if (mysql_query($sql2) === TRUE) {

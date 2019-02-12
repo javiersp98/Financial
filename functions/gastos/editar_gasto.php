@@ -11,6 +11,7 @@ $receptor = $_POST['input-receptor'];
 $categoria = $_POST['input-categoria'];
 $cuenta = $_POST['input-cuenta'];
 
+// Ejecutamos la consulta de Update
 $sql = "UPDATE gastos SET
 importe='$importe',
 concepto='$concepto',
@@ -21,4 +22,5 @@ cuenta='$cuenta'
 WHERE id=$id";
 $result = mysql_query($sql) or die(mysql_error());
 
+// Volvemos al origen
 header("Location: ../../gastos.php");

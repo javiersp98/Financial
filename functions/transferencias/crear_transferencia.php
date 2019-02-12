@@ -9,22 +9,17 @@ $recepcion = $_POST['input-cuenta-recepcion'];
 $procedencia = $_POST['input-procedencia'];
 $cuenta = $_POST['input-cuenta'];
 
+// Actualizamos el saldo de la cuenta de salida
 $sql = "UPDATE cuentas SET 
 saldo=saldo-$importe
 WHERE nombre LIKE '$salida'";
-
-ob_start();
-print_r($sql);
-$nombre = ob_get_clean();
-file_put_contents("C:\pruebas\ARCHIVO2.txt",$nombre);
-
 $result = mysql_query($sql) or die(mysql_error());
 
-
-
+// Actualizamos el saldo de la cuenta de entrada
 $sql = "UPDATE cuentas SET 
 saldo=saldo+$importe
 WHERE nombre LIKE '$recepcion'";
 $result = mysql_query($sql) or die(mysql_error());
 
+// Volvemos al origen
 header("Location: ../../cuentas.php");
