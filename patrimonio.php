@@ -27,7 +27,7 @@ $res = mysql_query("SELECT * FROM cuentas")
 or die(mysql_error());
 //$res = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
-foreach($res as $row){
+while($res as $row){
     $cuenta = $row['nombre'];
     $saldo = $row['saldo'];
     array_push($dataPoints, array("label"=> $cuenta, "y"=> $saldo));

@@ -2,7 +2,11 @@
 include "navbars.php";
 include "db/connect.php";
 ?>
+
+<head>
+<title>Cuentas</title>
 <link href="css/cuentas.css" rel="stylesheet" type="text/css"/>
+</head>
 
 <div class="mostrar_cuentas_grafico"><p>
   <?php include "graphics/g_cuentas.php"; ?>

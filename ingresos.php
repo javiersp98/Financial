@@ -2,7 +2,11 @@
 include "navbars.php";
 include "db/connect.php";
 ?>
-<link href="css/ingresos.css" rel="stylesheet" type="text/css"/>
+
+<head>
+  <title>Financial Software</title>
+  <link href="css/ingresos.css" rel="stylesheet" type="text/css"/>
+</head>
 
 <div class="mostrar_ingresos_grafico"><p>
   <?php include "graphics/g_ingresos_totales_procedencia.php"; ?>

@@ -15,18 +15,18 @@
       </div>
       <div class="modal-body">
         <!-- Formulario de introducción de datos -->
-        <form action="functions/cuentas/crear_cuenta.php" method="POST">                    
-            Nombre<br>
-            <input type="text" class="form-control form-space" name="input-nombre" value="" />
-            Saldo inicial<br>
-            <input type="text" class="form-control form-space" name="input-saldo" value="" />
-            Descripción<br>
-            <input type="text" class="form-control form-space" name="input-descripcion" value="" />                       
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="reset"  class="btn btn-danger">Limpiar</button>
-                <button type="submit" class="btn btn-success">Crear</button>
-            </div>
+        <form action="functions/cuentas/crear_cuenta.php" method="POST">
+          Nombre<br>
+          <input type="text" class="form-control form-space" name="input-nombre" value="" />
+          Saldo inicial<br>
+          <input type="text" class="form-control form-space" name="input-saldo" value="" />
+          Descripción<br>
+          <input type="text" class="form-control form-space" name="input-descripcion" value="" />
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="reset" class="btn btn-danger">Limpiar</button>
+            <button type="submit" class="btn btn-success">Crear</button>
+          </div>
         </form>
       </div>
     </div>

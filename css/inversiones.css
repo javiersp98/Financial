@@ -1,14 +1,13 @@
 body {
-    /*Margen por arriba (para esquivar la barra superior)*/
-    margin-top: 100px;
-    /*Margen por la izq*/
-    margin-left: 35px;
-    /*Margen por la der*/
-    margin-right: 35px;
-    /*Ancho máximo*/
-    /*width: 85%;*/
+  /*Margen por arriba (para esquivar la barra superior)*/
+  margin-top: 100px;
+  /*Margen por la izq*/
+  margin-left: 35px;
+  /*Margen por la der*/
+  margin-right: 35px;
+  /*Ancho máximo*/
+  /*width: 85%;*/    
 }
-
 
 /* Gestión de columnas */
 .column {
@@ -26,20 +25,20 @@ body {
 
 /* Inversiones */
 .mostrar_inversiones {
-    max-width: 100%;
-    /*border-style: solid;*/
-    margin-bottom: 40px;
-    margin-right: 5px;
-    margin-left: 5px;
+  max-width: 100%;
+  /*border-style: solid;*/
+  margin-bottom: 40px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .historico_inversiones {
   max-width: 100%;
-    /*border-style: solid;*/
-    margin-bottom: 40px;
-    margin-right: 5px;
-    margin-left: 5px;
+  /*border-style: solid;*/
+  margin-bottom: 40px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .mostrar_inversiones_texto {
-    margin: auto;
-    width: 50%;
+  margin: auto;
+  width: 50%;
 }

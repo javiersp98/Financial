@@ -22,7 +22,7 @@
               include('../db/connect.php');              
               $res = mysql_query("SELECT nombre, vendida FROM inversiones ORDER BY vendida ASC, nombre ASC")
               or die(mysql_error());
-              while($row = mysql_fetch_array( $res )) {                
+              while($row = mysql_fetch_array( $res )) {
                 ?>
                   <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre'];
                                 if ($row['vendida']==1) {

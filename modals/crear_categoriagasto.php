@@ -20,12 +20,12 @@
           <input type="text" class="form-control form-space" name="input-nombre" value="" />
         </form>
         <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="reset"  class="btn btn-danger">Limpiar</button>
-              <button type="submit" class="btn btn-success">Crear</button>
-          </div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="reset" class="btn btn-danger">Limpiar</button>
+          <button type="submit" class="btn btn-success">Crear</button>
+        </div>
         </form>
       </div>
     </div>
   </div>
-</div>  
+</div>

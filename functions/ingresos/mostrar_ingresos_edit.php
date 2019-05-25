@@ -22,11 +22,11 @@
                     Importe<br>
                     <input type="text" class="form-control form-space" name="input-importe" value="<?php echo $row['importe']?>" />
                     Fecha<br>
-                    <input type="text" class="form-control form-space" name="input-fecha" value="<?php echo $row['fecha']?>" />
+                    <input type="date" class="form-control form-space" name="input-fecha" value="<?php echo $row['fecha']?>" />
                     Procedencia del dinero<br>
                     <input type="text" class="form-control form-space" name="input-procedencia" value="<?php echo $row['procedencia']?>" />
-                    Cuenta en la que ha sido ingresado<br>
-                    <input type="text" class="form-control form-space" name="input-cuenta" value="<?php echo $row['cuenta']?>" />
+                    Cuenta en la que fue ingresado<br>
+                    <input type="text" class="form-control form-space" name="input-cuenta" value="<?php echo $row['cuenta']?>" readonly/>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-warning">Editar</button>

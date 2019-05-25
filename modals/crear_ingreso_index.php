@@ -31,16 +31,17 @@
               $res = mysql_query("SELECT nombre, saldo FROM cuentas")
               or die(mysql_error());
               while($row = mysql_fetch_array( $res )) {                
-                ?>
-                  <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?> (<?php echo $row['saldo']?>€)</option>
-                <?php
+            ?>
+            <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?> (<?php echo $row['saldo']?>€)
+            </option>
+            <?php
               }
             ?>
           </select>
           <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="reset"  class="btn btn-danger">Limpiar</button>
-              <button type="submit" class="btn btn-success">Crear</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="reset" class="btn btn-danger">Limpiar</button>
+            <button type="submit" class="btn btn-success">Crear</button>
           </div>
         </form>
       </div>

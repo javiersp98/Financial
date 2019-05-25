@@ -12,8 +12,8 @@ CREATE TABLE cuentas (
 INSERT INTO cuentas (id, nombre, saldo, descripcion)
 VALUES 	(1, "Efectivo", 50, "Dinero en mano"),
 		(2, "Caja", 350, "Dinero almacenado"),
-		(3, "Unicaja", 2965.98, "Cuenta habitual"),
-		(4, "OpenBank", 0, "Cuenta de inversion");
+		(3, "Unicaja", 3000, "Cuenta habitual"),
+		(4, "OpenBank", 350, "Cuenta de inversion");
 
 DROP TABLE IF EXISTS ingresos;
 CREATE TABLE ingresos (
@@ -25,9 +25,9 @@ CREATE TABLE ingresos (
     cuenta VARCHAR(50) -- lugar donde entra el dinero (EJ: efectivo, cuenta en Unicaja...)
 );
 INSERT INTO ingresos (id, importe, concepto, fecha, procedencia, cuenta)
-VALUES	(1, 200, "Paga Diciembre", '2018-12-20', "Salutic", "Unicaja"),
+VALUES	(1, 200, "Sueldo Diciembre", '2018-12-20', "Salutic", "Unicaja"),
 		(2, 200, "Regalos", '2018-12-31', "Familiares", "Efectivo"),
-		(3, 100, "Paga Enero", '2019-01-30', "Salutic", "Unicaja");        
+		(3, 100, "Sueldo Enero", '2019-01-30', "Salutic", "Unicaja");        
 
 DROP TABLE IF EXISTS gastos;
 CREATE TABLE gastos (
@@ -41,9 +41,8 @@ CREATE TABLE gastos (
 );
 INSERT INTO gastos (id, importe, concepto, fecha, receptor, categoria, cuenta)
 VALUES	(1, 50, "Gasolina", '2019-01-15', "Hidrocarburos Alhaurin", "Transporte/Combustible", "Efectivo"),
-		(2, 20, "Regalos", '2019-01-25', "Tienda de regalos", "Regalos", "Efectivo"),
-        (3, 30, "Cosas de Febrero", '2019-02-20', "xx", "xx", "Efectivo"),
-        (4, 40, "Cosas de 2018", '2018-09-01', "Wake me up when september ends", "xx", "Unicaja");
+		(2, 20, "Regalos", '2019-01-25', "Tienda de regalos", "Compras/Regalos", "Efectivo"),
+        (3, 30, "Recarga Autobus", '2019-02-20', "EMT", "Transporte/Bus", "Efectivo");        
 
 DROP TABLE IF EXISTS gastos_categorias;
 CREATE TABLE gastos_categorias (
@@ -75,7 +74,7 @@ CREATE TABLE pagar (
     cobrador VARCHAR(50)
 );
 INSERT INTO pagar (id, concepto, importe, fecha_creacion, fecha_tope, cobrador)
-VALUES	(1, "Cerveza", 1, '2018-12-10', NULL, "Pablete");
+VALUES	(1, "Medio bocadillo", 1, '2018-12-10', NULL, "Pablete");
 
 DROP TABLE IF EXISTS cobrar;
 CREATE TABLE cobrar (
