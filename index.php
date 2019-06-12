@@ -26,7 +26,7 @@
 
     <div class="column middle">
       <div class="mostrar_ingresos">
-        <div class="mostrar_cuentas_texto">
+        <div class="mostrar_ingresos_texto">
           <center>
             <h4>Ingresos</h4>
           </center>
@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <div class="column right">
+    <div class="column middlelow">
       <div class="mostrar_gastos">
         <div class="mostrar_gastos_texto">
           <center>
